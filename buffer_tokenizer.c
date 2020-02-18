@@ -65,10 +65,9 @@ tokenize(svec* tokens, char* buffer)
 	char op;
 	char* temp;
 
-
-	if(buffer[0] == '\0' && buffer[0] == '\n') return 1;
-
 	buffer = trim_leading_whitespace(buffer);
+
+	if(buffer[ii] == '\0' || buffer[ii] == '\n') return 1;
 
 	// iterate over buffer
 	while(buffer[ii] != '\0' && buffer[ii] != '\n'){

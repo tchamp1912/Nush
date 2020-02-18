@@ -25,8 +25,6 @@ execute_shell_line(char* buffer)
 		svec* tokens;
 		tokens = make_svec();
 
-		printf("PID: %d", getpid());
-		puts(buffer);
 		// tokenize input stream
 		// if not input continue
 		if(!(tokenize(tokens, buffer))){

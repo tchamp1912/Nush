@@ -230,14 +230,6 @@ background_cmd(svec* tokens)
 		// return in parent process and terminate child process when done
 		if((cpid = fork())){
 			//parent process
-			waitpid(cpid, &status, 0);
-
-        printf("== executed program complete ==\n");
-
-        printf("child returned with wait code %d\n", status);
-        if (WIFEXITED(status)) {
-            printf("child exited with exit code (or main returned) %d\n", WEXITSTATUS(status));
-        }
 			return 0;
 		}
 		else{
